@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.63c91446.chunk.css",
+    "main.js": "/static/js/main.d1f212bd.chunk.js",
+    "main.js.map": "/static/js/main.d1f212bd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f027f2bf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f027f2bf.js.map",
+    "static/js/2.454af28a.chunk.js": "/static/js/2.454af28a.chunk.js",
+    "static/js/2.454af28a.chunk.js.map": "/static/js/2.454af28a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.63c91446.chunk.css.map": "/static/css/main.63c91446.chunk.css.map",
+    "static/js/2.454af28a.chunk.js.LICENSE.txt": "/static/js/2.454af28a.chunk.js.LICENSE.txt",
+    "static/media/Calculadora.png": "/static/media/Calculadora.2b7e2d85.png",
+    "static/media/Daniel_Saez_CV.pdf": "/static/media/Daniel_Saez_CV.3477940a.pdf",
+    "static/media/astronout.png": "/static/media/astronout.9b231a54.png",
+    "static/media/boy.svg": "/static/media/boy.ef8bd65e.svg",
+    "static/media/curriculum.png": "/static/media/curriculum.21029b61.png",
+    "static/media/email.png": "/static/media/email.cd381c58.png",
+    "static/media/heart.png": "/static/media/heart.556c78a5.png",
+    "static/media/linkedin.png": "/static/media/linkedin.88bc5661.png",
+    "static/media/moon.svg": "/static/media/moon.cfe1766c.svg",
+    "static/media/redux.png": "/static/media/redux.cae23159.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f027f2bf.js",
+    "static/js/2.454af28a.chunk.js",
+    "static/css/main.63c91446.chunk.css",
+    "static/js/main.d1f212bd.chunk.js"
+  ]
+}

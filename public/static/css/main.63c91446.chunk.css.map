@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/ui/particles.css"],"names":[],"mappings":"AACA,uBACE,2BAA6B,CAC7B,oBAAsB,CACtB,sBAAwB,CACxB,mBACF","file":"main.63c91446.chunk.css","sourcesContent":["\r\n.tsparticles-canvas-el {\r\n  position: absolute !important;\r\n  width: 100% !important;\r\n  height: 100vh !important;\r\n  z-index: 0 !important;\r\n}"]}
