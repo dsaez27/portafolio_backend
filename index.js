@@ -36,8 +36,7 @@ app.post('/api/', (req, res) => {
     const mailOptions = {
         from: '"Nodemailer Contact" < ' + process.env.EMAIL + ' >',
         to: process.env.EMAIL,
-        subject: 'Node Contact Form',
-        text: 'Tienes un nuevo mensaje de tu formulario de contacto.',
+        subject: 'Tienes un nuevo mensaje de tu formulario de contacto.',
         html: '<p>'+ req.body.name + '<br>' + req.body.email + '<br>' +  req.body.message + '</p>',
     };
 
