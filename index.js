@@ -19,11 +19,14 @@ app.use(express.static('public'));
 //Parse Json
 app.use(express.json());
 
+<<<<<<< HEAD
 //Route
 app.get('/api/', (req, res) => {
     res.send('Hello World');
 });
 
+=======
+>>>>>>> 8238129 (cambos generales)
 app.post('/api/', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
