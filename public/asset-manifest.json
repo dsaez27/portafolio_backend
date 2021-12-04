@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.63c91446.chunk.css",
-    "main.js": "/static/js/main.52745e05.chunk.js",
-    "main.js.map": "/static/js/main.52745e05.chunk.js.map",
+    "main.js": "/static/js/main.01bd20dc.chunk.js",
+    "main.js.map": "/static/js/main.01bd20dc.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f027f2bf.js",
     "runtime-main.js.map": "/static/js/runtime-main.f027f2bf.js.map",
-    "static/js/2.c235b3a6.chunk.js": "/static/js/2.c235b3a6.chunk.js",
-    "static/js/2.c235b3a6.chunk.js.map": "/static/js/2.c235b3a6.chunk.js.map",
+    "static/js/2.dbbf3afb.chunk.js": "/static/js/2.dbbf3afb.chunk.js",
+    "static/js/2.dbbf3afb.chunk.js.map": "/static/js/2.dbbf3afb.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.63c91446.chunk.css.map": "/static/css/main.63c91446.chunk.css.map",
-    "static/js/2.c235b3a6.chunk.js.LICENSE.txt": "/static/js/2.c235b3a6.chunk.js.LICENSE.txt",
+    "static/js/2.dbbf3afb.chunk.js.LICENSE.txt": "/static/js/2.dbbf3afb.chunk.js.LICENSE.txt",
     "static/media/Daniel_Saez_CV.pdf": "/static/media/Daniel_Saez_CV.3477940a.pdf",
     "static/media/astronout.png": "/static/media/astronout.9b231a54.png",
     "static/media/boy.svg": "/static/media/boy.ef8bd65e.svg",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f027f2bf.js",
-    "static/js/2.c235b3a6.chunk.js",
+    "static/js/2.dbbf3afb.chunk.js",
     "static/css/main.63c91446.chunk.css",
-    "static/js/main.52745e05.chunk.js"
+    "static/js/main.01bd20dc.chunk.js"
   ]
 }
