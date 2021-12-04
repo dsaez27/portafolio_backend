@@ -19,14 +19,6 @@ app.use(express.static('public'));
 //Parse Json
 app.use(express.json());
 
-<<<<<<< HEAD
-//Route
-app.get('/api/', (req, res) => {
-    res.send('Hello World');
-});
-
-=======
->>>>>>> 8238129 (cambos generales)
 app.post('/api/', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -40,7 +32,14 @@ app.post('/api/', (req, res) => {
         from: '"Nodemailer Contact" < ' + process.env.EMAIL + ' >',
         to: process.env.EMAIL,
         subject: 'Tienes un nuevo mensaje de tu formulario de contacto.',
-        html: '<p>'+ req.body.name + '<br>' + req.body.email + '<br>' +  req.body.message + '</p>',
+        html:
+            '<p>' +
+            req.body.name +
+            '<br>' +
+            req.body.email +
+            '<br>' +
+            req.body.message +
+            '</p>',
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
