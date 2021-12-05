@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const nodemailer = require('nodemailer');
+
+const sgMail = require('@sendgrid/mail');
 
 //Configure dotenv to read .env file
 require('dotenv').config();
@@ -19,38 +20,27 @@ app.use(express.static('public'));
 //Parse Json
 app.use(express.json());
 
-app.post('/api/', (req, res) => {
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAIL,
-            pass: process.env.PASSWORD,
-        },
-    });
-
-    const mailOptions = {
-        from: '"Nodemailer Contact" < ' + process.env.EMAIL + ' >',
-        to: process.env.EMAIL,
-        subject: 'Tienes un nuevo mensaje de tu formulario de contacto.',
-        html:
-            '<p>' +
-            req.body.name +
-            '<br>' +
-            req.body.email +
-            '<br>' +
-            req.body.message +
-            '</p>',
+app.post('/contact', (req, res) => {
+    const { name, email, message } = req.body;
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    const msg = {
+        to: `dssh27@gmail.com`,
+        from: 'dssh27@gmail.com',
+        subject: 'Nuevo envío de formulario de contacto!',
+        html: `<p><b>Nombre:</b> ${name}</p> <p><b>Email:</b> ${email}</p><p><b>Mensaje:</b> <br><br> <i>${message}</i></p>`,
     };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log(error);
-        }
-        console.log('Message sent: %s', info.messageId);
-        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
-        res.send('Message Sent');
-    });
+    const msg2 = {
+        to: 'dssh27@gmail.com',
+        from: 'dssh27@gmail.com',
+        subject:
+            'Oye, Dany, recibimos un nuevo envío de formulario de contacto.!',
+        html: `<p><b>Nombre:</b> ${name}</p> <p><b>Email:</b> ${email}</p><p><b>Mensaje:</b><br><br><i>${message}</i></p>`,
+    };
+    sgMail
+        .send(msg)
+        .then(sgMail.send(msg2))
+        .then((res) => res.json())
+        .catch((err) => res.send(err));
 });
 
 //Configure Port
