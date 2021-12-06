@@ -22,23 +22,18 @@ app.use(express.json());
 
 app.post('/contact', (req, res) => {
     const { name, email, message } = req.body;
+
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-    const msg = {
-        to: `dssh27@gmail.com`,
-        from: 'dssh27@gmail.com',
-        subject: 'Nuevo envío de formulario de contacto!',
-        html: `<p><b>Nombre:</b> ${name}</p> <p><b>Email:</b> ${email}</p><p><b>Mensaje:</b> <br><br> <i>${message}</i></p>`,
-    };
     const msg2 = {
         to: 'dssh27@gmail.com',
-        from: 'dssh27@gmail.com',
+        from: 'dssh26@outlook.com',
         subject:
-            'Oye, Dany, recibimos un nuevo envío de formulario de contacto.!',
+            'Hey Dany, recibimos un nuevo envío de formulario de contacto!',
         html: `<p><b>Nombre:</b> ${name}</p> <p><b>Email:</b> ${email}</p><p><b>Mensaje:</b><br><br><i>${message}</i></p>`,
     };
+
     sgMail
-        .send(msg)
-        .then(sgMail.send(msg2))
+        .send(msg2)
         .then((res) => res.json())
         .catch((err) => res.send(err));
 });
